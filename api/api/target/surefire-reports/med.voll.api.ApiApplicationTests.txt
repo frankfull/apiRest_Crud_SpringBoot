@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: med.voll.api.ApiApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.997 s <<< FAILURE! - in med.voll.api.ApiApplicationTests
+contextLoads  Time elapsed: 0.008 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@8c3619e testClass = ApiApplicationTests, locations = '{}', classes = '{class med.voll.api.ApiApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@194bcebf, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@53ce1329, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@51e69659, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@9da1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@60bd273d, org.springframework.boot.test.context.SpringBootTestAnnotation@a18202f0], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 1.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Migration checksum mismatch for migration version 2
+-> Applied to database : -1809053286
+-> Resolved locally    : -1848389755
+Either revert the changes to the migration, or run repair to update the schema history.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+Caused by: org.flywaydb.core.api.exception.FlywayValidateException: 
+Validate failed: Migrations have failed validation
+Detected applied migration not resolved locally: 1.
+If you removed this migration intentionally, run repair to mark the migration as deleted.
+Migration checksum mismatch for migration version 2
+-> Applied to database : -1809053286
+-> Resolved locally    : -1848389755
+Either revert the changes to the migration, or run repair to update the schema history.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+
